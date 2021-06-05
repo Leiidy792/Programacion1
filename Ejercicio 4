@@ -1,0 +1,19 @@
+num = int(input("Digite el primer numero de dos digitos"))
+num2 = int(input("Digite el segundo numero de dos digitos"))
+
+if num > 9 and num < 100:
+    if num2 > 9 and num2 < 100:
+         result2 = num + num2
+         result = result2 % 2
+
+         if result == 0:
+             print ("El numero {} es par".format (result2))
+    
+         else:
+             print ("El numero {} no es par".format (result2))
+
+    else:
+        print ("Los numeros no son de dos digitos")
+    
+else:
+    print ("Los numeros no son de dos digitos")
