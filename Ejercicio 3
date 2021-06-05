@@ -1,0 +1,41 @@
+num = int(input("DIGITE UN NUMERO DE DOS DIGITOS"))
+
+numg = 0
+num3 = 0
+num2 = 0
+
+
+if num > 9 and num < 100:
+    if num < 0:
+        num *= -1
+    dig3 = num - num // 10 * 10
+    num = num // 10
+    dig2 = num % 10
+    
+
+    for i in range (1,dig3+1):
+        if dig3 % i == 0:
+            num3 += 1
+        
+
+    for k in range (1, dig2 + 1):
+        if dig2 % k == 0:
+            num2 += 1
+
+
+    if num2 == 2:
+        numg += 1
+    if num3 == 2:
+        numg += 1
+
+    if numg != 0:
+        print ("El numero tiene", numg, "digitos primos")
+    else:
+        print ("El numero no tiene digitos primos")
+    
+
+
+else:
+    print ("el {} no es un numero de dos digitos" .format(num))
+
+
