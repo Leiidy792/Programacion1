@@ -1,0 +1,21 @@
+num1 = int(input("Introduzca un numero de cuatro digitos"))
+
+if num1 > 999 and num1 < 10000:
+    a = num1 // 1000
+    num = num1 - a * 1000
+    b = num // 100
+    num = num - b * 100
+    c = num // 10
+    num = num - c * 10
+    d = num
+
+    if b == c:
+        print("El segundo y tercer numero son iguales")
+
+    else:
+        print("El segundo y tercer numero son diferentes")
+
+
+
+else:
+    print ("El numero no tiene cuatro digitos")
