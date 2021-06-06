@@ -1,0 +1,35 @@
+numg = 0
+dig1 = 0
+dig2 = 0
+dig3 = 0
+
+numg = int (input("Digite un numero de tres digitos"))
+if numg > 99 and numg < 1000:
+    dig1 = numg // 100 % 10
+    dig2 = numg // 10 % 10
+    dig3 = numg % 10 % 10
+
+    if dig1 % dig2 == 0:
+        print ("El primer digito es multiplo del segundo")
+    else:
+        if dig1 % dig3 == 0:
+            print ("El primer digito es multiplo del tercero")
+        else:
+            if dig2 % dig1 == 0:
+                print ("El segundo numero es multiplo del primero")
+            else:
+                if dig2 % dig3 == 0:
+                    print ("El segundo numero es multiplo del tercero")
+                else:
+                    if dig3 % dig1 == 0:
+                        print ("El tercer numero es multiplo del primero")
+                    else:
+                        if dig3 % dig2 == 0:
+                            print ("El tercer digito es multiplo del segundo")
+                        else:
+                            if dig3 % dig2 != 0 and dig3 % dig1 != 0 or dig2 % dig1 != 0 and dig2 % dig3 != 0 or dig1 % dig2 != 0 and dig1 % dig3 != 0:
+                                print ("Los numeros digitados no son multiplos")         
+        
+
+else:
+    print ("El numero no tiene tres digitos")
