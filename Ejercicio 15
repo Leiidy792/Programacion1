@@ -1,0 +1,21 @@
+num1 = int(input("Digite el primer numero de dos cifras"))
+num2 = int(input("Digite el segundo numero de dos cifras"))
+
+if num1 > 9 and num1 < 100 and num2 > 9 and num2 < 100:
+    sumad = num1 - num2
+
+
+    if num1 % sumad == 0:
+        print("La diferencia entre los numeros es divisor del digito {}".format (num1))
+
+    else:
+            if num2 % sumad == 0:
+                print("La diferencia entre los numeros es divisor del digito {}".format (num2))
+
+            else:
+                print("La diferencia entre los numeros no es divisor de ningun digito")
+                
+ 
+    
+else:
+    print("Los numeros digitados son incorrectos")
