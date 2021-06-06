@@ -1,0 +1,37 @@
+num1 = int(input("Digite el primer numero de dos cifras"))
+num2 = int(input("Digite el segundo numero de dos cifras"))
+
+if num1 > 9 and num1 < 100 and num2 > 9 and num2 < 100:
+    sumad = num1 - num2
+    dig1 = num1 // 10
+    num = num1 - dig1 * 10
+    dig2 = num
+    dig3 = num2 // 10
+    numd = num2 - dig3 * 10
+    dig4 = numd
+    sumat = dig1+dig2+dig3+dig4
+    mult = num1 * num2
+    
+    if sumad % 2 == 0:
+        print("La suma de los digitos es {}".format(sumat))
+
+    else:
+        if sumad > 1 and sumad < 10:
+            cont = 0
+            for i in range (2, sumad):
+                resto = sumad % i
+                if resto == 0:
+                    cont += 1
+            if cont == 0:
+                print("La multiplicacion de los digitos es {}".format(mult))
+
+                if sumad % 10 == 4:
+                    print ("Los digitos del los numeros son {}".format (str(dig1)+str(dig2)))
+
+        else:
+            print("Los numeros registrados no son par, ni primos, ni terminan en 4")
+
+            
+else:
+    print("Los numeros escritos no tiene dos digitos")
+    
