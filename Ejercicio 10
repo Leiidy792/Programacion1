@@ -1,0 +1,26 @@
+num1 = int(input("Digite el primer numero"))
+num2 = int(input("Digite el segundo numero"))
+if num1 == num2:
+    print("Los numeros digitados son iguales")
+        
+        
+else:
+    if num1 > num2:
+        kil= num1 - num2
+        if kil < 11:
+            for i in range (num2-1, num1):
+                resto = num2 % i
+                print ("{} resto".format(i))
+        else:
+            print ("La diferencia no es menor que 10")
+
+    else:
+        kil2= num2 - num1
+        if kil2 < 11:
+            for u in range (num1 - 1, num2):
+                resto2 = num1 % u
+                print ("{}resto2".format(u))
+
+        else:
+            print ("La diferencia no es menor que 10")
+    
