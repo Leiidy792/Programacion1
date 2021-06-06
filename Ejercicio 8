@@ -1,0 +1,22 @@
+num1 = int(input("Introduzca un numero de cinco digitos"))
+
+if num1 > 9999 and num1 < 100000:
+    a = num1 // 10000
+    num = num1 - a * 10000
+    b = num // 1000
+    num = num - b * 1000
+    c = num // 100
+    num = num - c * 100
+    d = num // 10
+    num = num - d * 10
+    e = num
+    kil = str(e)+str(d)+str(c)+str(b)+str(a)
+    num1 = str(num1)
+    if num1 == kil:
+        print ("El numero {} es capicua".format(num1))
+    else:
+        print("El numero {} no es capicua".format(num1))
+                
+
+else:
+    print ("El numero no tiene cinco digitos")
