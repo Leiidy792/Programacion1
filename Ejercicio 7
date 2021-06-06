@@ -1,0 +1,20 @@
+numg = 0
+dig1 = 0
+dig2 = 0
+dig3 = 0
+
+numg = int (input("Digite un numero de tres digitos"))
+if numg > 99 and numg < 1000:
+    dig1 = numg // 100 % 10
+    dig2 = numg // 10 % 10
+    dig3 = numg % 10 % 10
+
+    if dig1>dig2 :
+        print ("El primer digito es mayor que el segundo")
+    else:
+        dig1 < dig2:
+            dig2 = dig1
+            
+
+else:
+    print ("El numero no tiene tres digitos")
