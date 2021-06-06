@@ -1,0 +1,20 @@
+num = int(input("Digite un numero entero"))
+if num < 101:
+    div = num // 2
+    cuad = num ** 2
+    dig1 = num // 10
+    
+    if num % 4 == 0:
+        print("La mitad del numero registrado es {}".format (div))
+    else:
+        if num % 5 == 0:
+            print("El cuadrado del numero registrado es {}".format (cuad))
+        else:
+            if num % 6 == 0:
+                print("El primer digito del numero introducido es {}".format(dig1))
+
+            else:
+                print("El numero introducido no es multiplo de 4 5 o 6")
+
+else:
+    print("El numero digitado es mayor que 100")
