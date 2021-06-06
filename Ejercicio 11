@@ -1,0 +1,32 @@
+num1 = int(input("Digite el numero de dos cifras"))
+
+if num1 > 9 and num1 < 100:
+    a = num1 // 10
+    num = num1 - a * 10
+    b = num
+    resul = a + b
+    if num1 % 2 == 0:
+        print ("La suma de los digitos es {}".format(resul))
+
+    else:
+        if num1 > 1 and num1 < 100:
+            cont = 0
+            for i in range (2, num1):
+                resto = num1 % i
+                if resto == 0:
+                    cont += 1
+            if cont == 0:
+                print("El ultimo digito del numero es {}".format(b))
+
+            else:
+
+                if num1 % 5 == 0 and num1 < 31:
+                    print("El primer digito es {}".format (a))
+                    
+                else:
+                    print("El numero digitado no es par, ni primo, ni multiplo de 5")
+                    
+
+else:
+    print("El numero no tiene dos digitos")
+    
