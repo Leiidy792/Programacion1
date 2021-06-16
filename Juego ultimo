@@ -1,0 +1,104 @@
+import random
+numero = random.randint (1,100)
+
+
+print ("Hola, Cual es tu nombre???: ")
+usuario = input()
+
+print ("Un placer, " + usuario + " . Estoy pensando un numero entre 0 & 100. Crees que los puedas adivinar?")
+aceptar = input ("Escribe yes si quieres jugar ")
+if aceptar == "yes":
+    print ("Empecemos")
+    print("")
+    print ("1. El juego consiste en adivinar un numero que estoy pensando")
+    print("")
+    print ("2. Tendras multiples intentos para acertar en el numero")
+    print("")
+    print ("3. Te ire indicando cuando estes cerca y cuando no lo este")
+    print("")
+    print ("4. Caliente = Cerca y Frio = Lejos")
+    print("")
+    print("")
+    print ("SUERTE, "+ usuario +"!!!")
+    print("")
+    print("Elige cuantos intentos quieres: ")
+    print ("1 = Ilimitados")
+    print ("2 = otro")
+    Eleccion =  int(input ("Elige opcion 1 o 2 "))
+
+    #cuando los intentos son ilimitados
+    
+    if Eleccion == 1:
+        intentos = 0
+        jugando = True
+        while jugando:
+            
+            intentos += 1
+            escoger = int(input("Dime un numero"))
+            caliente = escoger - numero
+         
+            
+            if escoger == numero:
+                print("Felicidades, acertaste. El juego termino. has necesitado", intentos, "intentos")
+                jugando = False
+                
+            elif caliente <= 10:
+                print ("CALIENTEEEE")
+                    
+            elif caliente > 10:
+                print ("FRIOOOOOOOO")
+
+
+
+# la opcion es 2
+
+    else:
+        if Eleccion == 2:
+            opcion = int(input("Cuantos intentos deseas?? "))
+            intentosp = 0
+                
+            jugandop = True
+
+            while intentosp != opcion:
+                
+                    if intentosp < opcion:
+                        intentosp = intentosp + 1
+                        escogerp = int(input("Dime un numero"))
+                        frio = escogerp - numero
+
+                    if escogerp == numero:
+                        print("Felicidades, acertaste. El juego termino. has necesitado", intentos, "intentos")
+
+
+                    elif frio <= 10:
+                            print ("CALIENTEEEE")
+                    
+                    elif frio > 10:
+                            print ("FRIOOOOOOOO")
+
+
+                            while intentosp > opcion:
+                                intentosp = intentosp - 1
+                                escogerp = int(input("Dime un numero"))
+                                frio = escogerp - numero
+
+
+                                if escogerp == numero:
+
+                                    print("Felicidades, acertaste. El juego termino. has necesitado", intentos, "intentos")
+
+
+                                elif frio <= 10:
+                                    print ("CALIENTEEEE")
+                    
+                                elif frio > 10:
+                                    print ("FRIOOOOOOOO")
+
+
+            if intentosp == opcion:
+                print ("Has agotado la cantidad de intentos disponibles")
+                
+
+else:
+    
+    print("Que mal que no quieras jugar conmigo. Nos vemos!")
