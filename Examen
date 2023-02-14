@@ -1,0 +1,38 @@
+class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Datos a Cifrar:");
+            string input = Console.ReadLine();
+            Console.WriteLine("Resultado de Datos Cifrados: " + Rot13(input));
+            Console.ReadLine();
+        }
+
+        static string Rot13(string input)
+        {
+            char[] charArray = input.ToCharArray();
+            for (int i = 0; i < charArray.Length; i++)
+            {
+                int charValue = (int)charArray[i];
+                if (charValue >= 'a' && charValue <= 'z')
+                {
+                    Console.WriteLine("No se Aceptan Letras en Minusculas");
+                    Console.ReadKey();
+                }
+                    else if (charValue >= 'A' && charValue <= 'Z')
+                    {
+                        if (charValue > 'M')
+                        {
+                            charValue -= 13;
+                        }
+                    else
+                    {
+                        charValue += 13;
+                    }
+                }
+                charArray[i] = (char)charValue;
+            }
+            return new string(charArray);
+            Console.ReadKey();
+        }
+    }
